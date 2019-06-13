@@ -1,0 +1,52 @@
+﻿<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/Style")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="jumbotron text-center" style="margin-bottom:0">
+        <h1>The Media Company</h1>
+        <p>We are a media company therefore we would like an online application for our Data Operators to manage Campaigns. This will be a small application with Create, Edit and Delete Campaign functionalities. </p>
+    </div>
+    <nav class="navbar navbar-inverse">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+
+
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Home", "Index", "Home") </li>
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("NewCampaign", "Index", "NewCampaign")</li>
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+
+
+            </ul>
+        </div>
+
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/index")
+    @Scripts.Render("~/bundles/CSS")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

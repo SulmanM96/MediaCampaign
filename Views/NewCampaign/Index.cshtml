@@ -1,0 +1,58 @@
+﻿@model MediaCampaign.Models.Campaign
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div>
+    <h4>Campaign</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyName1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyName1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CampaignName1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CampaignName1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CampaignType1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CampaignType1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDate1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartDate1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndDate1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndDate1)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
